@@ -1,0 +1,84 @@
+/* CSS tyylitiedosto alkaa! */
+/* Kannattaa poistaa määrittelyjä jos niitä ei tarvitse! */
+/* Lisätä saa makunsa mukaan uusia määrittelyjä C: */
+
+body {
+  background-color: #88E4FF; /* Taustaväri (laitoin kauniin sinisen alkuun). HEX värikoodeja löytyy esimkerkiksi: https://htmlcolorcodes.com/ */
+  background-image: url("kuva.jpg"); /* Taustakuva jos haluat sellaisen laittaa. */
+  background-repeat: no-repeat; /* Taustakuvan toisto. no-repeat tarkoittaa että kuva ei toistu, repeat-x, tarkoittaa että kuva toistuu vaakasuoraan ja repeat-y tarkoittaa, että kuva toistuu pystyakselilla, pelkkä repeat toistaa kuvan sekä pystyyn, että vaakaan  */
+
+  font-family: Helvetica; /* Sivuston pääfontti, jokainen elementti käyttää tätä fonttia ellei muuten määritellä */
+  font-size: 1em; /* Fonttikoko, kannattaa testailla lukuja väliltä 0.8em-1.5em Mikä näyttää omaan silmään hyvältä */
+  line-height: 1.7em; /* Riviväli, tässäkin kannattaa kokeilla mikä näyttää hyvältä */
+  color: #272727; /* Fontin väri, tähänkin voi laittaa valitsemansa HEX värikoodin (https://htmlcolorcodes.com/) */
+
+  padding: 0; /* Nämä resetoivat selaimen omatekemiä margineja ja paddingeja */
+  margin: 0;  /* Eli anna näiden olla nollassa */
+}
+
+.wrapper { /* Tässä määritellään wrapperin paikka ja koko */
+  margin-top: 20px; /* Marginaali selaimen yläosasta */
+  margin-bottom: 20px; /* Marginaali selaimen alaosasta */
+  margin-left: auto; /* Tuodaan div keskelle sivua */
+  margin-right: auto; /* Tuodaan div keskelle sivua */
+  width: 60%; /* Divin leveys, tähän voi laittaa prosentteja (1-100%) tai pikselimääriä esim. 500px */
+  background-color: #FFFFFF; /* Sisällön taustaväri, laitoin valkoisen oletukseksi */
+}
+
+.menu { /* Määritellään valikon marginaaleja ja paddingeja */
+  margin: 40px; /* Näitä arvoja kannattaa muuttaa ja katsoa miten se vaikuttaa */
+  padding: 30px; /* Esimerkiksi 0px-400px */
+  text-align: center; /* Valikkolinkkien tasaus ja paikka // left = tasaus vasempaan // right = tasaus oikeaan // justify = tasaus sekä oikealle että vasemmalle */
+}
+
+.menu a { /* Määritellään valikon linkkien ulkonäkö */
+  font-family: Georgia; /* Valikkolinkin fontti voi olla sama tai eri */
+  font-size: 1.2em; /* Itse tykkään laittaa valikkolinkin tekstin isommaksi, makuasia */
+  text-decoration: none; /* Tällä saa tekstiin alleviivauksen. None = ei alleviivausta // underline = tekee alleviivauksen // line-through = yliviivaus // overline = tekstin yläpuolelle tulee viiva  */
+  text-transform: uppercase; /* Tämä muuttaa kaikki kirjaimet automaattisesti ISOIKSI // lowercase = muuttaa kaikki pieniksi kirjaimiksi // capitalize = Muuttaa Jokaisen Sanan Alkukirjaimen Isoksi */
+  letter-spacing: 2px; /* Kirjaimien väli */
+  color: #2b2b2b; /* Linkin tekstin väri */
+  margin-right: 20px; /* Jokaisen linkin oikea marginaali, eli kuinka kaukana linkit ovat toisistaan */
+}
+
+.menu a:active { /* Aktiivisen linkin määrittelyt. Tähän ei oikeastaan tarvitse määritellä mitään ihmeellistä, sillä .menu a:active "perii" kaikki .menu a:n tyylit*/
+  color: #000000;
+}
+
+.menu a:visited { /* Klikattu linkki, tämäkin perii .menu a:n määrittelyt */
+  color: #2b2b2b;
+}
+
+.menu a:hover { /* Kun viet hiiren linkin päälle, perii myöskin .menu a:n määrittelyt, ellet määritä jotain muuta */
+  color: #24CCFE; /* Fontin väri kannattaa vaihtaa, se on selkeämpi */
+  background-color: #FFFFFF; /* Taustaväri valkoinen :D */
+}
+
+.content { /* Sisältödivin määritykset */
+  margin: 20px; /* Vaihtele näitä arvoja ja katso miten se vaikuttaa */
+  padding: 20px; /* Esimerkiksi 0px-400px */
+}
+
+h1 { /* H1 otsikon tyylit */
+  font-size: 3em; /* h1 otsikko saa olla iso. Arvot väliltä 2em-4em ovat varmaan hyviä */
+  font-family: Arial; /* Otsikon fonttia voi vaihtaa tai pitää samana :D */
+  margin: 20px; /* Marginaali, jottei leipäteksti ole liian lähellä */
+}
+
+h2 { /* h2 otsikon tyylit */
+  font-size: 2em; /* h2 otsikko saa myös olla iso, mutta pienempi kuin h1 */
+}
+
+a { /* Normaalissa sisällössä esiintyvä linkki */
+  text-decoration: none; /* Tällä saa tekstiin alleviivauksen. None = ei alleviivausta // underline = tekee alleviivauksen // line-through = yliviivaus // overline = tekstin yläpuolelle tulee viiva  */
+  color: #3A90AA; /* Linkin normaali väri */
+}
+
+a:visited { /* Klikattu linkki. Tämä perii normaalin a:n määrittelyt */
+  color: #3A90AA;
+}
+
+a:hover { /* Kun viet hiiren linkin päälle */
+  color: #FFFFFF; /* Linkin tekstin väri */
+  background-color: #000000; /* Linkin taustaväri :D */
+}
